@@ -93,15 +93,19 @@ body {
   }
 
   .navbar {
-    flex-wrap: wrap;
-    overflow-x: unset;
-  }
+  display: flex;
+  flex-wrap: nowrap; /* sab ek line me rakhne ke liye */
+  overflow-x: auto; /* agar zyada links ho to horizontal scroll enable kare */
+  white-space: nowrap;
+}
 
-  .navbar a {
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid #222;
-  }
+.navbar a {
+  flex: 0 0 auto; /* fix kare taki links shrink na ho */
+  text-align: center;
+  padding: 10px 15px;
+  border-bottom: none;
+  border-right: 1px solid #222; /* chaho to line right me lagao */
+}
 }
 
 /* ============ CONTENT ============ */
