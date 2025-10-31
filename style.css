@@ -53,18 +53,27 @@ body {
 .navbar {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* ✅ responsive links wrap honge */
+  align-items: center;
+  flex-wrap: wrap;
   background-color: #16213e;
   padding: 8px 0;
   border-top: 1px solid #222;
   border-bottom: 2px solid #ff5722;
+  overflow-x: auto;       /* ✅ horizontal scroll allow */
+  white-space: nowrap;    /* ✅ prevent word breaks */
 }
 
 .navbar a {
   color: #fff;
   text-decoration: none;
-  padding: 8px 12px;
+  padding: 10px 15px;
   font-weight: 500;
+  display: inline-block;
+  flex-shrink: 0;         /* ✅ prevent link squeeze */
+}
+
+.navbar::-webkit-scrollbar {
+  display: none;          /* ✅ scrollbar hide for clean look */
 }
 
 .navbar a:hover {
@@ -84,15 +93,14 @@ body {
   }
 
   .navbar {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    overflow-x: unset;
   }
 
   .navbar a {
-    padding: 10px;
-    display: block;
     width: 100%;
     text-align: center;
+    border-bottom: 1px solid #222;
   }
 }
 
