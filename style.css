@@ -56,11 +56,23 @@ body {
 
 /* Content Layout */
 .content {
-  display: flex;
+  display: block;
   max-width: 1200px;
   margin: 20px auto;
   gap: 20px;
   padding: 0 10px;
+}
+.trending-section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+
+/* Optional: news aur trending dono ke box ko center aligned aur responsive rakho */
+.news-section, .trending-section {
+  max-width: 900px;
+  margin: auto;
+  padding: 10px;
 }
 .news-section {
   flex: 3;
